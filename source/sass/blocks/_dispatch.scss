@@ -1,0 +1,48 @@
+.dispatch {
+  background-color: $light-text-color_bg;
+  color: $dark-color-secondary;
+  padding: 20px 0px 50px;
+  text-align: center;
+}
+
+.dispatch__title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.dispatch__form  {
+  @include flex($jc: c);
+}
+
+.dispatch__form input {
+  padding: 12px 18px;
+  height: 30px;
+  border: none;
+  outline: none;
+  min-width: 320px;
+}
+
+.dispatch__form button {
+  @extend .no-gutters;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: auto;
+  background-color: $dark-color;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10px;
+    height: 15px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../img/icons/arrow.png');
+  }
+}

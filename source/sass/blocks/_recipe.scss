@@ -1,0 +1,56 @@
+.recipe {
+  padding-bottom: 30px;
+}
+
+
+.recipe__title {
+  margin-bottom: 32px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.recipe__switcher {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.switcher__inner {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: $main-light-color_lighten;
+}
+
+.switcher__checkbox {
+  display: none;
+  &:checked + .switcher__title {
+    background-color: $dark-color;
+    color: $white-color;
+  }
+}
+
+.switcher__title {
+  cursor: pointer;
+  font-family: $main-font;
+  color: $dark-color-text;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 50px;
+  padding: 15px 25px;
+  background-color: $main-light-color_lighten;
+}
+
+.recipe__content {
+  @include flex($wrap: nowrap);
+}
+
+.recipe__col {
+  width: 50%;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  &:last-child {
+    margin-right: 0;
+  }
+}

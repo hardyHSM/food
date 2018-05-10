@@ -1,0 +1,111 @@
+.page-header {
+  text-align: center;
+  background-color: $dark-color;
+  color: $light-text-color;
+  padding: 35px 5px;
+}
+
+.page-header__logo {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.page-header__nav {
+  margin-bottom: 275px;
+}
+
+.main-nav {
+  width: 100%;
+}
+
+.main-nav__list {
+  list-style: none;
+  width: 100%;
+  @extend .no-gutters;
+}
+
+.main-nav__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: $light-text-color;
+  padding: 15px 15px;
+  transition: all .2s linear;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    width: 3px;
+    background-color: $accent-border-color;
+    left: 100%;
+    top: 0;
+    transition: all .4s linear;
+  }
+  &_active, &:hover {
+    background-color: $dark-color-secondary;
+    &::before {
+      opacity: 1;
+      left: 0;
+    }
+  }
+}
+
+.page-header__social {
+  justify-content: center;
+}
+
+/* * * * * * * * * * * * * * SWITCH LANGUAGE * * * * * * * * * * * * * *  */
+
+
+.page-header__language {
+  margin-bottom: 22px;
+}
+
+.switch-language__checkbox {
+  display: none;
+  &:checked + .switch-language__ann {
+    opacity: 1;
+  }
+}
+
+.switch-language__ann {
+  font-size: 18px;
+  cursor: pointer;
+  font-family: $main-font;
+  color: $light-text-color;
+  opacity: 0.7;
+  transition: all .2s ease;
+  text-transform: uppercase;
+}
+
+
+.switch-language__label {
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

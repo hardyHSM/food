@@ -1,0 +1,23 @@
+// Подключение шрифтов
+@import 'fonts';
+
+
+// подключение переменных, миксин и базовые настройки
+@import 'mixins';
+@import 'grid-mixins';
+@import 'vars';
+@import 'base';
+
+// подключение библиотек
+@import '../libs/normalize';
+//@import '../libs/font-awesome/fontawesome';
+@import '../libs/slick-1.8.0/slick';
+@import '../libs/slick-1.8.0/slick-theme';
+
+
+
+// modules include
+
+@import '/blocks/**/*';
+
+//@import 'media';

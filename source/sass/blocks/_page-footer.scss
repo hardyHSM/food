@@ -1,0 +1,30 @@
+.page-footer {
+  background-color: $dark-color-secondary;
+}
+
+.page-footer__bottom {
+  padding: 25px 45px;
+}
+.page-footer__bottom {
+  @include flex($jc: sb);
+}
+
+
+.menu-list {
+  @extend .no-gutters;
+  list-style-type: none;
+  @include flex();
+}
+
+.menu-list__item {
+  margin-right: 25px;
+}
+
+.menu-list__link {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $grey-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}

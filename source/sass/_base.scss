@@ -1,0 +1,95 @@
+
+html {
+	font-size: $baseFontSize;
+}
+.page {
+	font-family: $main-font;
+	line-height: 1.2;
+	color: $white-color;
+	font-size: $baseFontSize;
+	background-color: $white-color;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.page__row{
+	min-width: $desktop-width;
+	@include flex($wrap: nowrap);
+}
+
+.page-header {
+	width: 200px;
+	max-width: 230px;
+	flex-shrink: 0;
+	flex-grow: 1;
+}
+
+.page__wrapper {
+	min-width: 1190px;
+	flex-grow: 1;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.main-title {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: $dark-color-text;
+	font-family: $main-font;
+}
+
+.main-title_decorate {
+	padding-top: 40px;
+	border-top: 1px solid $border-color;
+	&::after {
+		content: "";
+		position: absolute;
+		@include left-align();
+		width: 65px;
+		height: 50px;
+		top: -22px;
+		padding: 20px;
+		background-position: 50% 50%;
+		background-color: $main-light-color;
+		background-repeat: no-repeat;
+		background-size: 80%;
+		background-image: url('../img/icons/decor.png');
+	}
+}
+
+.button {
+	padding: 12px 16px;
+	border: 1px solid $border-color;
+	color: $dark-color-text;
+}
+
+.button_theme_accent {
+	background-color: $secondary-accent-color;
+	color: $white-color;
+}
+
+
+
+
+
+
+
+
+
+
+

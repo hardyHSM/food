@@ -1,0 +1,160 @@
+.recipe-article {
+  @include flex($wrap: nowrap);
+}
+
+.recipe__article {
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.recipe-article__header {
+  width: 50%;
+  position: relative;
+}
+
+.recipe-article__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-article__body {
+  position: relative;
+  padding: 17px 10px;
+  padding-bottom: 40px;
+  width: 50%;
+  border-top: 2px solid $secondary-light-color;
+  border-right: 2px solid $secondary-light-color;
+  border-bottom: 2px solid $secondary-light-color;
+}
+
+.recipe-article__author {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.recipe-article__author-img {
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.recipe-article__author-name {
+  display: inline-block;
+  vertical-align: middle;
+  color: $light-text-color;
+}
+
+.recipe-article__title {
+  @extend .no-gutters;
+  font-family: $main-font;
+  font-size: 24px;
+  color: $dark-color-text_bold;
+  text-align: center;
+  margin-bottom: 25px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+// *** FEATURES LIST ****//
+
+.features-list {
+  @extend .no-gutters;
+  list-style-type: none;
+  @include flex($wrap: nowrap);
+}
+
+.features-list__item {
+  color: $main-accent-color;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 18px;
+  border-radius: 50px;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid $light-text-color;
+  &::before {
+    content: "";
+    position: absolute;
+    @include top-align();
+    left: 9px;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 50% 50%;
+    width: 18px;
+    height: 18px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.features-list__item_time {
+  &::before {
+    background-image: url('../img/icons/clock.png');
+  }
+}
+
+.features-list__item_complexity {
+  &::before {
+    background-image: url('../img/icons/cook.png');
+  }
+}
+
+.features-list__item_caloricity {
+  &::before {
+    background-image: url('../img/icons/kkal.png');
+  }
+}
+
+.recipe-article__products {
+  @extend .no-gutters;
+  color: $dark-color-text;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.recipe-article__data {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  border-top: 2px solid $secondary-light-color;
+  @include flex();
+}
+
+
+.likes-count {
+  padding-left: 30px;
+  font-size: 16px;
+  color: $main-grey-color;
+  position: relative;
+  &::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    @include top-align();
+    left: 0;
+    background-size: 90%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../img/icons/like.png');
+  }
+}
+
+.recipe-article__social {
+  margin-left: auto;
+}
+
+
+
+
+
+

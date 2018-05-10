@@ -1,0 +1,72 @@
+.main-header {
+  @include flex($jc: sb);
+  margin-bottom: 22px;
+}
+
+.search__button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 18px;
+  height: 18px;
+  background-size: 90%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: all .3s;
+  background-image: url('../img/icons/search.png');
+  &:focus, &:hover {
+    transform: scale(1.2) rotate(-45deg);
+  }
+}
+
+.main-header__notification {
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.notification__button {
+  border: none;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  width: 18px;
+  height: 18px;
+  background-size: 90%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: all .3s;
+  background-image: url('../img/icons/bell.png');
+  &:focus, &:hover {
+    transform: scale(1.2) rotate(-45deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 5px;
+    border-radius: 50%;
+    height: 5px;
+    background-color: #fe4900;
+  }
+}
+
+.main-header__user-profile {
+  margin-right: 20px;
+}
+
+.user-profile__button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 14px;
+  height: 20px;
+  background-size: 90%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: all .3s;
+  background-image: url('../img/icons/profile.png');
+  &:focus, &:hover {
+    transform: scale(1.2) rotate(-45deg);
+  }
+}
